@@ -1,0 +1,45 @@
+# dependencies
+node_modules/
+
+# expo
+.expo/
+dist/
+build/
+web-build/
+
+# env / secrets
+.env
+.env.*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+# Expo / Metro caches
+.expo-shared/
+.metro-health-check*
+*.tsbuildinfo
+
+# React Native / Hermes / misc caches
+*.log
+*.orig
+*.jks
+*.keystore
+
+# iOS / Android native (only if you ever run prebuild)
+ios/
+android/
+
+# Fastlane / EAS outputs (if you use later)
+*.ipa
+*.apk
+*.aab
+
+# macOS extras
+*.swp
