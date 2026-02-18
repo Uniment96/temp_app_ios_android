@@ -5,18 +5,14 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-
     "scheme": "tempmonitor",
-
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-
     "ios": {
       "bundleIdentifier": "ae.uniment.tempmonitor",
       "supportsTablet": true,
@@ -25,33 +21,37 @@
         "NSPhotoLibraryUsageDescription": "We need photo library access to upload damaged chiller photos."
       }
     },
-
     "android": {
       "package": "ae.uniment.tempmonitor",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "permissions": ["CAMERA"],
+      "permissions": [
+        "CAMERA",
+        "android.permission.CAMERA"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
-
     "plugins": [
       "expo-router",
       "expo-barcode-scanner",
       "expo-secure-store",
       "@react-native-community/datetimepicker"
     ],
-
     "experiments": {
       "typedRoutes": true
     },
-
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "47532458-1ab5-4336-bf39-991556a65d49"
+      }
     }
   }
 }

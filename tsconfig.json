@@ -1,26 +1,21 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": "expo/tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "Bundler",
-    "lib": [
-      "ES2021",
-      "DOM"
-    ],
+    "module": "preserve",
+    "moduleResolution": "bundler",
+
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "types": [
-      "react",
-      "react-native"
-    ]
+
+    "types": ["react", "react-native"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "exclude": ["node_modules"]
 }
